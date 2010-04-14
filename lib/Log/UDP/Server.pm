@@ -1,10 +1,15 @@
 package Log::UDP::Server;
+
+use 5.006; # Found with Perl::MinimumVersion
+
 use MooseX::POE;
 with 'Data::Serializable';
 
 use constant DATAGRAM_MAXLEN => 8192;
 
 use IO::Socket::INET ();
+
+=encoding utf8
 
 =head1 NAME
 
@@ -16,7 +21,7 @@ Version 0.02
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -211,7 +216,7 @@ L<http://search.cpan.org/dist/Log-UDP-Server/>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2009 Robin Smidsrø.
+Copyright 2009 Robin Smidsrød.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
